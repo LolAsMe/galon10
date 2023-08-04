@@ -7,9 +7,18 @@ export default defineConfig({
         vue(),
         laravel(
             [
-            'resources/css/app.css',
-            'resources/js/app.js',
-        ],
+                'resources/css/app.css',
+                'resources/js/app.js',
+            ],
         ),
     ],
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.esm-bundler.js',
+        },
+    },
+    server: {
+        host: '192.168.1.9'
+    }
+
 });
