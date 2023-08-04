@@ -2,11 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+
+}
+
 @layer utilities {
-    .h-my-screen{
+    .h-my-screen {
         height: 100dvh;
     }
-    .w-my-screen{
+    .router-link-active {
+        font-weight: bold;
+        font-size: larger;
+    }
+    .w-my-screen {
         width: 100dvw;
     }
 }

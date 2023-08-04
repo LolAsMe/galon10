@@ -1,30 +1,39 @@
 <template>
-    <nav class="bg-white p-4 h-16 sticky top-0 border text-black">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <div class=" text-xl font-bold"></div>
-
-            <!-- Navigation Links -->
-            <div class="hidden md:flex space-x-4">
-                <router-link to="/" class="">Home</router-link>
-                <router-link to="/about" class="">About</router-link>
-                <router-link to="/contact" class="">Contact</router-link>
-            </div>
-
-            <!-- Hamburger Menu (for mobile) -->
-            <button @click="toggleMenu" class="md:hidden  focus:outline-none">
+    <nav class="sticky z-20 bg-sky-500 text-white p-2 h-10 top-0 ">
+        <div class="flex justify-between items-center">
+            <div class="ml-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
-            </button>
-        </div>
+            </div>
 
-        <!-- Mobile Menu (hidden by default) -->
-        <div v-show="showMenu" class="md:hidden">
-            <router-link to="/" class="block p-2 ">Home</router-link>
-            <router-link to="/about" class="block p-2 ">About</router-link>
-            <router-link to="/contact" class="block p-2 ">Contact</router-link>
+
+            <!-- Navigation Links -->
+            <div class="mx-auto">
+                <span class="text-lg">SI Galon</span>
+            </div>
+            <span class="text-sm">
+                ADD ITEM
+            </span>
+            <div class="ml-2 w-7">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M9 12H15" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                        <path d="M12 9L12 15" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path
+                            d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                            stroke="#ffffff" stroke-width="2"></path>
+                    </g>
+                </svg>
+            </div>
+            <div>
+
+            </div>
         </div>
     </nav>
 </template>
@@ -33,7 +42,7 @@
 export default {
     data() {
         return {
-            showMenu: false,
+            showMenu: true,
         };
     },
     methods: {
